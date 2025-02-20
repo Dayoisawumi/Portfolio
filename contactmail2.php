@@ -5,9 +5,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/PHPMailer/src/Exception.php';
-require 'PHPMailer/PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/PHPMailer/src/SMTP.php';
+// require 'PHPMailer/PHPMailer/src/Exception.php';
+// require 'PHPMailer/PHPMailer/src/PHPMailer.php';
+// require 'PHPMailer/PHPMailer/src/SMTP.php';
 
 require 'c:\wamp64\apps\phpmyadmin5.2.1\vendor\autoload.php';
 
@@ -15,7 +15,7 @@ $headers = array('MIME-Version' => '1.0',
                 'Content-type' => 'text/html;charset=UTF-8'
                 );
 
-$htmlcontent = file_get_contents('mail/index.php');
+$htmlcontent = file_get_contents('mail/index.html');
 
 //$messagedetails = "Compliment of the day $name. Your message on Isawumi, Abel Dayo's portfolio was sent successfully.<br><br> I really appreciate you for reaching out. I will get back to you within the shortest time possible where necessary.<br><br>Thank you very much once again and do enjoy what is left of your day. ";
 
@@ -35,7 +35,7 @@ try {
     $mail->Username   = 'dayoisawumi@gmail.com';                     //SMTP username
     $mail->Password   = 'jxyyikpxqdwgyoql';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS` (SMTPS)
+    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS` (SMTPS) (465)
 
     //Recipients
     $mail->setFrom('dayoisawumi@gmail.com', 'Isawumi, Abel Dayo');
@@ -51,12 +51,12 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Contact Form';
+    $mail->Subject = 'Thank You';
     $mail->Body    = $htmlcontent;
     $mail->AltBody = 'This is a mail from Isawumi, Abel Dayo\'s portfolio';
 
     $mail->send();
-    echo "Message has been sent";
+    // echo "Message has been sent";
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }

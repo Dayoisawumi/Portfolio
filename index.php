@@ -1,11 +1,19 @@
 <?php 
 session_start();
+
+// Include the cookie functions file
+require_once('inc_files/cookies.php');
+
+// Set caching headers for static resources (e.g., CSS, JavaScript, images)
+// Cache for 1 month (2592000 seconds)
+header("Cache-Control: public, max-age=2592000");
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Isawumi, Abel Dayo - Portfolio</title>
+	<title>Isawumi Abel Dayo - Portfolio</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="css/animate.css">
@@ -14,7 +22,7 @@ session_start();
 
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
-
+ 
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
 
 
@@ -34,9 +42,10 @@ session_start();
 			<div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-resume">Resumè</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-portfolio">Skills</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-resume">Who am I?</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-services">Skills</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-vision">Vision</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-projects">Projects</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
 				</ul>
 			</div>
@@ -50,11 +59,10 @@ session_start();
 		<div class="container">
 			<div class="row intro-text align-items-center justify-content-center">
 				<div class="col-md-10 text-center pt-5">
-
 					<h1 class="site-heading site-animate">Hello, I'm 
-						<p> <strong>Isawumi,</strong> Abel Dayo</h1>
-					<strong class="d-block text-white text-uppercase letter-spacing">and this is My Portfolio</strong>
-
+				<p> <strong>Isawumi,</strong> Abel Dayo</p></h1>
+				<h2>Feel free to call me <strong>Ekúndayò</strong> if you can</h2>
+				<p>A dynamic Web Developer, IT Manager, and Creative Visionary. Let's build something extraordinary together. </p>
 				</div>
 			</div>
 		</div>
@@ -65,102 +73,31 @@ session_start();
 			<div class="row">
 				<div class="col-md-12 mb-5">
 					<div class="section-heading text-center">
-						<h2>My <strong>Resumè</strong> </h2>
+						<h2>Who <strong>am I?:</strong></h2>
+						<p>The Tech Enthusiast You Can Count On!</p>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<h2 class="mb-5">Education</h2>
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> 2017 - 2021</span>
-						<h3>Bachelor in Technology & Education</h3>
-						<p>Mathematics Education</p>
-						<span class="school">Federal University of Technology Minna, Niger State</span>
-					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span>2013 - 2016</span>
-						<h3>National Certificate in Education</h3>
-						<p>Mathematics with Computer Science Education</p>
-						<span class="school">Kaduna State College of Education Gidan Waya, Kaduna State</span>
-					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> 2007 - 2013</span>
-						<h3>Senior Secondary School Certificate</h3>
-						<p>National Examination Council (NECO)</p>
-						<span class="school">Goverment College Kagoro, Kaduna State</span>
-					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> 2001 - 2007</span>
-						<h3>Primary School</h3>
-						<p>First School Leaving Certificate</p>
-						<span class="school">LGEA Primary School Ungwan Boro, Kaduna State</span>
-					</div>
-
+				<div class="col-lg-6 pr-lg-5 mb-5 mb-lg-0">
+				<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/nqoTmbpTocs?si=yytJ7REZDlnFTc3M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+				<img src="images/image_1.jpg"  alt="Image placeholder" class="img-fluid" loading="lazy">	
 				</div>
-				<div class="col-md-6">
+				<div class="col-lg-6 pl-lg-6">
 
+					<p class="mb-5">I am a versatile professional skilled in web development, IT management, and visual arts. My expertise spans HTML, CSS, and PHP, with a passion for AI, cybersecurity, Digital Forensics, and prompt engineering.</p>
+  					
+  					<p class="mb-5">With years of experience driving results and creating impact, I bring innovation and strategy to every project.</p>
 
-					<h2 class="mb-5">Experience</h2>
+					<p class="mb-5" >Currently serving as an IT Manager, I lead technology initiatives and oversee systems that support core business operations, ensuring seamless functionality across teams. My role allows me to blend technical expertise with leadership, fostering an environment where technology drives organizational success.</p>
 
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> 2023 - Present</span>
-						<h3>IT Officer</h3>
-						<p>Manage company website, design and manage social media handles</p>
-						<span class="school">ProDesign Interiors LTD</span>
-					</div>
+					<p class="mb-5" >As I evolve in my career, I’m passionate about expanding my knowledge in emerging fields such as cybersecurity, Digital Forensics, AI technologies, and prompt engineering. These areas are vital to the future of technology, and I am committed to staying ahead of the curve through continuous learning and application.</p>
 
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> 2020 - Present</span>
-						<h3>Lead Photographer</h3>
-						<p>Shoot and edit pictures during Church services</p>
-						<span class="school">Praise Baptist Church Narayi, Kaduna State</span>
-					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> 2020 - 2022</span>
-						<h3>UI/UX Designer</h3>
-						<p>Create functional designs for web and mobile applications</p>
-						<span class="school">MacroFocus Nig. LTD</span>
-					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> 2016 - 2017</span>
-						<h3>Assistant Administrative Secretary</h3>
-						<p>Perform all clerical duties</p>
-						<span class="school">Children Evangelism Ministry Kaduna State</span>
-					</div>
-
-
+					<p class="mb-5" >My vision is to leverage my experience in tech management and Web development to contribute to innovative projects while deepening my expertise in cybersecurity and AI technology practices. I am always open to exploring new opportunities and collaborations that align with these passions.</p>
+					
 				</div>
 			</div>
-		</div>
+			</div>
 	</section> <!-- .section -->
 
-	<section class="site-section" id="section-about">
-		<div class="container">
-			<div class="row mb-5 align-items-center">
-				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
-					<img src="images/image_1.jpg" alt="Image placeholder" class="img-fluid">
-				</div>
-				<div class="col-lg-5 pl-lg-5">
-					<div class="section-heading">
-						<h2>About <strong>Me</strong></h2>
-					</div>
-					<p class="lead">I am passionate about technology and visual arts. I thrive at the intersection of creativity and innovation.</p>
-					<p class="mb-5  ">With a strong foundation in PHP development, coupled with keen eye for photography and expertise in video editing, i am dedicated to crafting immerse digital experiences that captivate and inspire audiences.</p>
-
-					<p>
-						<a href="#section-contact" class="btn btn-success px-4 py-2 btn-sm smoothscroll">Hire Me</a> </p>
-					<p>	<a href="download.php?file=file/portfolio.pdf" class="btn btn-info px-4 py-2 btn-sm">Download Resumè</a>
-					</p>
-				</div>
-			</div>
-
-
-		</div>
-	</section>
 
 	<section class="site-section pb-0"  id="section-services">
 		<div class="container">
@@ -168,7 +105,77 @@ session_start();
 			<div class="row mb-4">
 				<div class="col-md-12">
 					<div class="section-heading text-center">
-						<h2>My <strong>Services</strong></h2>
+						<h2>Think You Know <strong>Tech?</strong> Let's Talk Real <strong>Skills!</strong></h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-md-6 col-lg-3 text-center mb-5">
+					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
+						<span class="icon">
+							<span class="icon-browser2"></span>
+						</span>
+						<h3 class="mb-4">Front End Development</h3>
+						<p>HTML, CSS, JavaScript</p>
+					<!-- <a href="#" class="site-link">View Projects<i class="icon-chevron-right"></i></a> -->
+					</div>
+				</div>
+					<div class="col-md-6 col-lg-3 text-center mb-5">
+					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
+						<span class="icon">
+							<span class="icon-pencil3"></span>
+						</span>
+						<h3 class="mb-4">Back End Development</h3>
+						<p>PHP, MySQL</p>
+					<!-- <p><a href="#" class="site-link">View Projects <i class="icon-chevron-right"></i></a> -->
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 text-center mb-5">
+					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
+						<span class="icon">
+							<span class="icon-pencil3"></span>
+						</span>
+						<h3 class="mb-4">Artificial Intelligence</h3>
+						<p>Prompt engineering, cybersecurity</p>
+					<!-- <a href="photography" class="site-link">See More <i class="icon-chevron-right"></i></a> -->
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 text-center mb-5">
+					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
+						<span class="icon">
+							<span class="icon-video2"></span>
+						</span>
+						<h3 class="mb-4">Creative Design</h3>
+						<p>Photography, video editing, graphic design</p>
+					<!-- <a href="#" class="site-link">See More <i class="icon-chevron-right"></i></a> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="site-section" id="section-vision">
+		<div class="container">
+			<div class="row intro-text align-items-center justify-content-center">
+				<div class="col-md-12">
+				<div class="section-heading text-center">
+				<h2>Dream Big or Stay Home: My <strong>Vision</strong> for Tomorrow</h2>
+				<p>My goal is to lead in tech innovation, create sustainable solutions, and inspire others through thought leadership. Building impactful businesses and fostering meaningful change is my community. </p>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+
+		<section class="site-section pb-0"  id="section-projects">
+		<div class="container">
+
+			<div class="row mb-4">
+				<div class="col-md-12">
+					<div class="section-heading text-center">
+						<h2>Doubt My Skills? Check These Out!</h2>
 					</div>
 				</div>
 			</div>
@@ -179,19 +186,19 @@ session_start();
 						<span class="icon">
 							<span class="icon-browser2"></span>
 						</span>
-						<h3 class="mb-4">Web Design</h3>
-						<p>Proficient in PHP, HTML and CSS adept at crafting dynamic, efficient and functional web solutions.</p>
-					<!--	<p><a href="#" class="site-link">View a sample<i class="icon-chevron-right"></i></a></p> -->
+						<h3 class="mb-6">Portfolio Website</h3>
+						<p>This website is a showcase of my expertise in web development and creative design.</p>
+					<a href="#" class="site-link">View Projects<i class="icon-chevron-right"></i></a>
 					</div>
 				</div>
-				<div class="col-md-6 col-lg-4 text-center mb-5">
+					<div class="col-md-6 col-lg-4 text-center mb-5">
 					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
 						<span class="icon">
-							<span class="icon-camera3"></span>
+							<span class="icon-pencil3"></span>
 						</span>
-						<h3 class="mb-4">Photography</h3>
-						<p>Skilled photographer with keen eye for composition and lighting, capturing memorable moments with precision.</p>
-					<!--	<p><a href="#" class="site-link">Learn More <i class="icon-chevron-right"></i></a></p> -->
+						<h3 class="mb-6">AI Prompt Library</h3>
+						<p>A collection of optimized prompts for generating AI-driven visuals and text.</p>
+					<p><a href="#" class="site-link">View Projects <i class="icon-chevron-right"></i></a>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 text-center mb-5">
@@ -199,203 +206,22 @@ session_start();
 						<span class="icon">
 							<span class="icon-video2"></span>
 						</span>
-						<h3 class="mb-4">Video Editing</h3>
-						<p>Experienced in the video editing, blending creativity with technical expertise to produce captivating visual narratives.</p>
-					<!--	<p><a href="#" class="site-link">Learn More <i class="icon-chevron-right"></i></a></p> -->
-					</div>
-				</div>
-				
-
-			</div>
-		</div>
-	</section>
-
-
-	
-
-	<section class="site-section" id="section-blog">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 mb-5">
-					<div class="section-heading text-center">
-						<h2>Other <strong>Certifications</strong></h2>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-6 col-lg-4 text-center mb-5">
-					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
-						<span class="icon">
-							<span class="icon-ribbon"></span>
-						</span>
-						<h3 class="mb-4">Introduction to Design</h3>
-						<p>ProCreator Solutions Private Limited</p>
-					</div>
-				</div>
-				
-				<div class="col-md-6 col-lg-4 text-center mb-5">
-					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
-						<span class="icon">
-							<span class="icon-ribbon"></span>
-						</span>
-						<h3 class="mb-4">Design Thinking</h3>
-						<p>ProCreator Solutions Private Limited</p>
-					</div>
-				</div>
-			
-				<div class="col-md-6 col-lg-4 text-center mb-5">
-					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
-						<span class="icon">
-							<span class="icon-ribbon"></span>
-						</span>
-						<h3 class="mb-4">Jobberman Soft Skill</h3>
-						<p>Jobberman Soft-Skills Training.</p>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-4 text-center mb-5">
-					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
-						<span class="icon">
-							<span class="icon-ribbon"></span>
-						</span>
-						<h3 class="mb-4">International Volunteering Training</h3>
-						<p>La Plage Meta Verse</p>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-4 text-center mb-5">
-					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
-						<span class="icon">
-							<span class="icon-ribbon"></span>
-						</span>
-						<h3 class="mb-4">Africa Agenda 2063 Goodwill Digital Ambassador</h3>
-						<p>La Plage Meta Verse</p>
-					</div>
-				</div>								
-			</div>
-		</div>
-	</section>
-
-	<section class="site-section" id="section-portfolio">
-		<div class="container">
-			<div class="row">
-				<div class="section-heading text-center col-md-12">
-					<h2>Skills <strong>Acquired</strong></h2>
-				</div>
-			</div>
-
-			<div class="filters-content">
-				<div class="row grid">
-					<div class="single-portfolio col-sm-4 all mockup">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/p1.jpg" alt="">
-							</div>
-							<a href="images/p1.jpg" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a>                                  
-						</div>
-						<div class="p-inner">
-							<h4>PHP</h4>
-						</div>                                         
-					</div>
-					<div class="single-portfolio col-sm-4 all mockup">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/p2.jpg" alt="">
-							</div>
-							<a href="images/p2.jpg" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a>                                  
-						</div>
-						<div class="p-inner">
-							<h4>Photography</h4>
-						</div>                                         
-					</div>                            
-					<div class="single-portfolio col-sm-4 all packaging">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/p3.jpg" alt="">
-							</div>
-							<a href="images/p3.jpg" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a> 
-
-						</div>
-						<div class="p-inner">
-							<h4>Video Editing</h4>
-						</div>
-					</div>
-					<div class="single-portfolio col-sm-4 all packaging">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/p4.jpg" alt="">
-							</div>
-							<a href="images/p4.jpg" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a>                                
-						</div> 
-						<div class="p-inner">
-							<h4>Presentation Skills</h4>
-						</div>
-					</div>
-					<div class="single-portfolio col-sm-4 all typography">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/p5.jpg" alt="">
-							</div>
-							<a href="images/p5.jpg" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a>                                
-						</div>
-						<div class="p-inner">
-							<h4>Problem solving Skills</h4>
-						</div>
-					</div>
-					<div class="single-portfolio col-sm-4 all photography">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/p6.jpg" alt="">
-							</div>
-							<a href="images/p6.jpg" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a>                                
-						</div>
-						<div class="p-inner">
-							<h4>Graphic Design</h4>
-						</div>
+						<h3 class="mb-4">Creative Design</h3>
+						<p>Photography, video editing, graphic design</p>
+					<a href="#" class="site-link">See More <i class="icon-chevron-right"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- .section -->
 
 	<section class="site-section" id="section-contact">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 mb-5">
 					<div class="section-heading text-center">
-						<h2>Get <strong>In Touch</strong></h2>
+						<h2>Still Not Convinced? Let's Connect!</h2>
+						<p>Have a project in mind or want to collaborate? Reach out, and let's make it happen.</p>
 					</div>
 				</div>
 
@@ -413,31 +239,29 @@ session_start();
 						</li>
 						<li>
 							<span class="text-uppercase">WhatsApp</span>
-							+234 813 642 4457
+							<a href="">+234 813 642 4457</a>
 						</li>
 						<li>
-							<span class="text-uppercase">Address</span>
-							14 Maruwa Street <br>
-							Bayan Dutse Narayi,  <br>
-							Kaduna, Nigeria
+							<span class="text-uppercase">Philosophy</span>
+							<h5>Shaping Tomorrow's <strong>Tech</strong> Landscape, One <strong>Project</strong> at a Time.</h5>
 						</li>
 					</ul>
 				</div>
 
 				<div class="col-md-6 mb-5 mb-md-0">
-					<form action="process" class="site-form" method="POST" enctype="application/x-www-form-urlencoded">
+					<form action="process.php" class="site-form" method="POST" enctype="application/x-www-form-urlencoded">
 						<h3 class="mb-5">Get In Touch</h3>
 						<div class="form-group">
-							<input name="name" id="name" type="text" class="form-control px-3 py-4" placeholder="Your Name">
+							<input name="name" id="name" type="text" class="form-control px-3 py-4" placeholder="Your Name" required="">
 						</div>
 						<div class="form-group">
-							<input name="email" id="email" type="email" class="form-control px-3 py-4" placeholder="Your Email">
+							<input name="email" id="email" type="email" class="form-control px-3 py-4" placeholder="Your Email" required="">
 						</div>
 						<div class="form-group">
-							<input name="phone" id="phone" type="phone" class="form-control px-3 py-4" placeholder="Your Phone">
+							<input name="phone" id="phone" type="phone" class="form-control px-3 py-4" placeholder="Your Phone" required="">
 						</div>
 						<div class="form-group mb-5">
-							<textarea name="message" id="message"class="form-control px-3 py-4"cols="30" rows="10" placeholder="Write a Message"></textarea>
+							<textarea name="message" id="message"class="form-control px-3 py-4"cols="30" rows="5" placeholder="Write a Message" required=""></textarea>
 						</div>
 						<div class="form-group">
 							<button type="submit" name="submit" class="btn btn-primary  px-4 py-3">Send Message</button>
